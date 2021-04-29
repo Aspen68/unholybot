@@ -28,6 +28,10 @@ class iserverthesovietunionCog(commands.Cog):
                     for role in memberToRelease.roles:
                         if role.name == '@everyone':
                             continue
+                        if role.name == "admin":
+                            continue
+                        if role.name == "communist-robots":
+                            continue
                         await memberToRelease.remove_roles(role)
                 print(ctx.message.guild.roles)
                 for roles in ctx.message.guild.roles:

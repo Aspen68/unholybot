@@ -32,7 +32,10 @@ initial_extensions = [
     "Cogs.nuke",
     "Cogs.sendToGulag",
     "Cogs.iservethesovietunion",
-    "Cogs.watching"
+    "Cogs.watching",
+    "Cogs.privjet",
+    "Cogs.randomGulag",
+    "Cogs.giveFreeOnJoin"
 ]
 
 print(initial_extensions)
@@ -44,10 +47,11 @@ if __name__ == '__main__':
         except Exception as e:
             print(f"Failed to load extension {extension}")
 
+
 @bot.event
 async def on_ready():
     print(f"We have logged in as {bot.user}")
-    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name =f"watching"))
+    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name =f"{watching}"))
     print(discord.__version__)
 
 bot.run(token)
