@@ -6,7 +6,10 @@ import json
 with open("configuration.json", "r") as config:
     data = json.load(config)
     token = data["token"]
+    print(token)
     prefix = data["prefix"]
+    watching = data["watching"]
+
 
 
 class Greetings(commands.Cog):
@@ -28,7 +31,8 @@ initial_extensions = [
     "Cogs.communistmanifesto",
     "Cogs.nuke",
     "Cogs.sendToGulag",
-    "Cogs.iservethesovietunion"
+    "Cogs.iservethesovietunion",
+    "Cogs.watching"
 ]
 
 print(initial_extensions)
@@ -43,7 +47,7 @@ if __name__ == '__main__':
 @bot.event
 async def on_ready():
     print(f"We have logged in as {bot.user}")
-    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name =f"hentai porn"))
+    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name =f"watching"))
     print(discord.__version__)
 
 bot.run(token)

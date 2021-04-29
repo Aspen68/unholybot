@@ -23,7 +23,7 @@ class nukeCog(commands.Cog):
         else:
             if ctx.guild.get_role(813854393177866240) in userRoles:
                 if args[0]:
-                    await ctx.message.channel.purge(limit=int(args[0]))
+                    await ctx.message.channel.purge(limit=int(args[0]) + 1)
                     await ctx.send(f"Deleted {args[0]} messages")
                 else:
                     await ctx.send("Need to know how much to nuke")
