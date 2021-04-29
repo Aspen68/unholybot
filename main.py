@@ -25,7 +25,10 @@ initial_extensions = [
     "Cogs.help",
     "Cogs.ping",
     "Cogs.shalom",
-    "Cogs.communistmanifesto"
+    "Cogs.communistmanifesto",
+    "Cogs.nuke",
+    "Cogs.sendToGulag",
+    "Cogs.iservethesovietunion"
 ]
 
 print(initial_extensions)
