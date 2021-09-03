@@ -35,7 +35,12 @@ initial_extensions = [
     "Cogs.watching",
     "Cogs.privjet",
     "Cogs.randomGulag",
-    "Cogs.giveFreeOnJoin"
+    "Cogs.giveFreeOnJoin",
+    "Cogs.Advice",
+    "Cogs.gameLookUp",
+    "Cogs.Nasa",
+    "Cogs.insult",
+    "Cogs.food"
 ]
 
 print(initial_extensions)

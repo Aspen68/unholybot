@@ -9,7 +9,7 @@ class gulagCog(commands.Cog):
 
     @commands.Cog.listener()
     async def on_message(self, message:discord.Message):
-        rand = random.randint(0,50)
+        rand = random.randint(0,100)
         if message.author.id != self.bot.user.id:   
             if rand == 1:
                 roles = []
@@ -20,9 +20,9 @@ class gulagCog(commands.Cog):
                         if role.name == "@everyone":
                             continue
                         if role.name == "admin":
-                            continue
+                            break
                         if role.name == "communist-robots":
-                            continue
+                            break
                         await message.author.remove_roles(role)
                     for roles in message.guild.roles:
                         if roles.name == "prisoner":
